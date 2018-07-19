@@ -47,20 +47,21 @@
    <title></title>
  </head>
  <body>
-   <!--<?php echo $response; ?>
+  <?php echo $response; ?>
    <br>
 
    <br>
 
    </form>
-
+<!--
    <?php echo $messageDate; ?>
+
    <p>Veuillez indiquer votre age :</p>
    <form action="cible.php" method="post">
      <p>
        <input type="text" name="prenom" /> <input type="submit" value="Valider" />
      </p>
-   </form>
+   </form>-->
    <form action="cible.php" method="get">
      <label>Quel est ton genre ?</label>
      <input type="radio" name="gender" value="homme"> Homme
@@ -73,10 +74,7 @@
      <label>Quel est ton age ?</label>
      <input type="number" name="age">
      <br>
-  </form>-->
-  <form action="note.php" method="post">
-    <label>Indiquez votre résultat : </label>
-    <input type="number" name="note">
   </form>
+
  </body>
 </html>
