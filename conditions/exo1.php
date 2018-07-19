@@ -1,4 +1,5 @@
 <?php
+$temperature = 20;
 if( $temperature >= 15 ) {
   // code à exécuter si la condition est TRUE
   $vetement_du_jour = "T-shirt";
@@ -14,6 +15,6 @@ if( $temperature >= 15 ) {
      <title></title>
    </head>
    <body>
-
+<?php echo $vetement_du_jour ?>
    </body>
  </html>
