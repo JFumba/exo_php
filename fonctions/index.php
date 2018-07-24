@@ -36,9 +36,16 @@ function initials($str) {
     return $ret;
 }
 
-echo initials($string);
+echo initials($string). '<br><br>';
 
+
+function replace_ae ($stringInput) {
+    $ashed = str_replace("ae", "æ", $stringInput);
+    echo $ashed.' ';
+  }
+  echo replace_ae('caecotrophie').replace_ae('chaenichthys').replace_ae('microsphaera').replace_ae('sphaerotheca');
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
