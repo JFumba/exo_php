@@ -69,21 +69,21 @@ $maladeArray = array ("a attrapé la scarlatine.",
                       "a attrapé les oreillons.",
                       "a attrapé la coqueluche.",
                       "a attrapé la rougeole.");
-$ripArray = array ("est très triste, son grand-père vient de mourir.",
-                   "est très triste, sa grand-mère vient de mourir.",
-                   "est très triste, son chien vient de mourir.",
-                   "est très triste, son chat vient de mourir.",
-                   "est très triste, son oncle vient de mourir.");
-$extrascolaireArray = array ("doit préparer son camp scout.",
-                             "doit partir en mission humanitaire.",
-                             "a aqua-poney.",
-                             "doit s'entraîner pour le prochain Hunger Game.",
-                             "doit venger l'honneur de la famille.");
-$autreArray = array ("n'a pas envie de venir.",
-                     "doit assumer pleinement son rôle de nouveau Messie.",
-                     "doit retourner sur sa planète.",
-                     "ne passe pas le contrôle technique et doit repasser au garage.",
-                     "s'est enfui de sa cage.");
+$ripArray = array ("son grand-père est mort.",
+                   "sa grand-mère est morte.",
+                   "son chien est mort.",
+                   "son chat est mort.",
+                   "son oncle est mort.");
+$extrascolaireArray = array ("devait préparer son camp scout.",
+                             "devait partir en mission humanitaire.",
+                             "avait aqua-poney.",
+                             "devait s'entraîner pour le prochain Hunger Game.",
+                             "devait venger l'honneur de la famille.");
+$autreArray = array ("n'avait pas envie de venir.",
+                     "devait assumer pleinement son rôle de nouveau Messie.",
+                     "devait retourner sur sa planète.",
+                     "ne passait pas le contrôle technique et devait repasser au garage.",
+                     "avait réussi à sortir de sa cage.");
 $randMalade = $maladeArray[array_rand($maladeArray)];
 $randRip = $ripArray[array_rand($ripArray)];
 $randExtrascolaire = $extrascolaireArray[array_rand($extrascolaireArray)];
