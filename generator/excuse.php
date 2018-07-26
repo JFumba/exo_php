@@ -64,30 +64,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-$maladeArray = array ("a attrapé la scarlatine.",
-                      "a attrapé la varicelle.",
-                      "a attrapé les oreillons.",
-                      "a attrapé la coqueluche.",
-                      "a attrapé la rougeole.");
-$ripArray = array ("son grand-père est mort.",
-                   "sa grand-mère est morte.",
-                   "son chien est mort.",
-                   "son chat est mort.",
-                   "son oncle est mort.");
-$extrascolaireArray = array ("devait préparer son camp scout.",
-                             "devait partir en mission humanitaire.",
-                             "avait aqua-poney.",
-                             "devait s'entraîner pour le prochain Hunger Game.",
-                             "devait venger l'honneur de la famille.");
-$autreArray = array ("n'avait pas envie de venir.",
-                     "devait assumer pleinement son rôle de nouveau Messie.",
-                     "devait retourner sur sa planète.",
-                     "ne passait pas le contrôle technique et devait repasser au garage.",
-                     "avait réussi à sortir de sa cage.");
-$randMalade = $maladeArray[array_rand($maladeArray)];
-$randRip = $ripArray[array_rand($ripArray)];
-$randExtrascolaire = $extrascolaireArray[array_rand($extrascolaireArray)];
-$randMAutre = $autreArray[array_rand($autreArray)];
+
 
 
 
@@ -107,7 +84,8 @@ $randMAutre = $autreArray[array_rand($autreArray)];
   <p><span class="error">* champ obligatoire</span></p>
 
 
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <!--<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
+  <form action="excuse_cond.php" method="get">
 
     Prénom de votre enfant: <input type="text" name="firstName" value="<?php echo $firstName;?>">
     <span class="error">* <?php echo $firstNameErr;?></span>
@@ -138,13 +116,15 @@ $randMAutre = $autreArray[array_rand($autreArray)];
     <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="sickness") echo "checked";?> value="sickness">Maladie
     <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="death") echo "checked";?> value="death">Perte d'un être cher
     <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="priority") echo "checked";?> value="priority">Activité extra-scolaire importante
-    <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="whatever") echo "checked";?> value="other">Autre
+    <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="whatever") echo "checked";?> value="whatever">Autre
     <span class="error">* <?php echo $excuseTypeErr;?></span>
     <br><br>
-    <input type="submit" name="submit" value="Submit">
+    <button type="submit" class="btn btn-info">Générer la lettre d'excuse</button>
+
+
   </form>
 
-  <?php
+  <!--<?php
   echo "<h2>Votre lettre d'excuse:</h2>";
   echo $firstName;
   echo "<br>";
@@ -157,6 +137,6 @@ $randMAutre = $autreArray[array_rand($autreArray)];
   echo $teacherGender;
   echo "<br>";
   echo $excuseType;
-  ?>
+  ?>-->
   </body>
 </html>

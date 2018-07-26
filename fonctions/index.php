@@ -19,11 +19,11 @@ function summ($a, $b) {
     echo "Erreur, argument non numérique...";
   }
 }
-sum(3,9);
+sum(5,9);
  ?>
  <br><br>
  <?php
- summ(4, 3.2);
+ summ(4, 3);
  ?>
  <br><br>
  <?php
