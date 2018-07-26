@@ -1,0 +1,8 @@
+
+--Madame/Monsieur-- "$teacherName" , je  vous prie de bien vouloir excuse l'absence de ma  --fille/mon fils-- "$firstName"+"$lastName" (+ choix date?).
+
+En effet, mon enfant n'a pas pu se rendre en classe car --elle/il-- "$excuseType" .
+
+Je vous saurais gré d'en prendre note et m'en remets à votre compréhension.
+
+Je vous prie de croire, --madame/monsieur-- , à l'assurance de mes salutations les plus sincères.

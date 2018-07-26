@@ -88,16 +88,25 @@ $randMalade = $maladeArray[array_rand($maladeArray)];
 $randRip = $ripArray[array_rand($ripArray)];
 $randExtrascolaire = $extrascolaireArray[array_rand($extrascolaireArray)];
 $randMAutre = $autreArray[array_rand($autreArray)];
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    .error {color: #FF0000;}
+    </style>
   </head>
   <body>
     <h2>Générateur de lettres d'excuse</h2>
   <p><span class="error">* champ obligatoire</span></p>
+
+
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
     Prénom de votre enfant: <input type="text" name="firstName" value="<?php echo $firstName;?>">
@@ -129,7 +138,7 @@ $randMAutre = $autreArray[array_rand($autreArray)];
     <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="sickness") echo "checked";?> value="sickness">Maladie
     <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="death") echo "checked";?> value="death">Perte d'un être cher
     <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="priority") echo "checked";?> value="priority">Activité extra-scolaire importante
-    <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="other") echo "checked";?> value="other">Autre
+    <input type="radio" name="excuseType" <?php if (isset($excuseType) && $excuseType=="whatever") echo "checked";?> value="other">Autre
     <span class="error">* <?php echo $excuseTypeErr;?></span>
     <br><br>
     <input type="submit" name="submit" value="Submit">
